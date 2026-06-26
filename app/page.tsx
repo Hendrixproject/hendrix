@@ -64,26 +64,30 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h2 className="text-6xl md:text-7xl font-extrabold mb-6">
-            <span className="gradient-text">Welcome to Hendrix</span>
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-pink-600 dark:text-pink-400 mb-4">
+            Are you experienced?
+          </p>
+          <h2 className="text-6xl md:text-8xl font-black mb-6 tracking-tight">
+            <span className="gradient-text">Hendrix</span>
           </h2>
           <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-            A powerful Django-like admin interface built with cutting-edge
-            technologies:
-            <span className="font-semibold text-indigo-600 dark:text-indigo-400">
+            A Django-like admin that plays your data like a Stratocaster.
+            Define models on the fly, wield full CRUD, and ship it on
+            <span className="font-semibold text-violet-600 dark:text-violet-400">
               {" "}
               Next.js 15
             </span>
             ,
-            <span className="font-semibold text-purple-600 dark:text-purple-400">
+            <span className="font-semibold text-pink-600 dark:text-pink-400">
               {" "}
               React 19
             </span>
             , and
-            <span className="font-semibold text-pink-600 dark:text-pink-400">
+            <span className="font-semibold text-amber-600 dark:text-amber-400">
               {" "}
               AWS Amplify
             </span>
+            .
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             <Link
@@ -228,7 +232,7 @@ export default function Home() {
                 />
               </div>
               <span className="text-slate-600 dark:text-slate-400 font-medium">
-                © 2025 Hendrix. Built with ❤️ using Next.js & AWS Amplify.
+                © 2026 Hendrix. Built with ❤️ using Next.js & AWS Amplify.
               </span>
             </div>
             <div className="flex items-center gap-6">
@@ -239,7 +243,7 @@ export default function Home() {
                 Admin Panel
               </Link>
               <a
-                href="https://github.com"
+                href="https://github.com/Hendrixproject/hendrix"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
