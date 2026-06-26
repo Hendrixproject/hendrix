@@ -55,7 +55,7 @@ export default function AdminDashboard() {
           <div className="mt-4 space-y-2">
             <Link
               href="/admin/schema"
-              className="block text-sm text-indigo-600 hover:text-indigo-800"
+              className="block text-sm text-accent hover:text-accent-hover"
             >
               + Create New Model
             </Link>
@@ -76,7 +76,7 @@ export default function AdminDashboard() {
               </p>
               <Link
                 href="/admin/schema"
-                className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+                className="mt-4 inline-block px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
               >
                 Create Model
               </Link>
@@ -96,7 +96,7 @@ export default function AdminDashboard() {
                         <div>
                           <Link
                             href={`/admin/models/${model.id}`}
-                            className="text-lg font-medium text-gray-900 hover:text-indigo-600"
+                            className="text-lg font-medium text-gray-900 hover:text-accent"
                           >
                             {model.label}
                           </Link>
@@ -125,7 +125,7 @@ export default function AdminDashboard() {
                     <div className="flex items-center gap-2">
                       <Link
                         href={`/admin/models/${model.id}/create`}
-                        className="px-4 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+                        className="px-4 py-2 text-sm bg-accent text-white rounded-lg hover:bg-accent-hover"
                       >
                         + Add Record
                       </Link>

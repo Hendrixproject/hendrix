@@ -117,7 +117,7 @@ export default function SchemaBuilder() {
                 onChange={(e) => setModelName(e.target.value)}
                 placeholder="e.g., product, customer"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
               />
               <p className="mt-1 text-xs text-gray-500">
                 Internal name (lowercase, no spaces)
@@ -134,7 +134,7 @@ export default function SchemaBuilder() {
                 onChange={(e) => setModelLabel(e.target.value)}
                 placeholder="e.g., Product, Customer"
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
               />
             </div>
 
@@ -147,7 +147,7 @@ export default function SchemaBuilder() {
                 value={pluralLabel}
                 onChange={(e) => setPluralLabel(e.target.value)}
                 placeholder="e.g., Products, Customers"
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
               />
             </div>
 
@@ -163,7 +163,7 @@ export default function SchemaBuilder() {
                     onClick={() => setSelectedIcon(icon)}
                     className={`text-2xl p-2 rounded-lg border-2 transition-colors ${
                       selectedIcon === icon
-                        ? "border-indigo-500 bg-indigo-50"
+                        ? "border-accent bg-accent-soft"
                         : "border-gray-200 hover:border-gray-300"
                     }`}
                   >
@@ -183,7 +183,7 @@ export default function SchemaBuilder() {
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Describe what this model is for..."
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
             />
           </div>
         </div>
@@ -195,7 +195,7 @@ export default function SchemaBuilder() {
             <button
               type="button"
               onClick={addField}
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 text-sm"
+              className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover text-sm"
             >
               + Add Field
             </button>
@@ -223,7 +223,7 @@ export default function SchemaBuilder() {
                         })
                       }
                       placeholder="field_name"
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
                   </div>
 
@@ -238,7 +238,7 @@ export default function SchemaBuilder() {
                         updateField(index, { label: e.target.value })
                       }
                       placeholder="Field Label"
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                     />
                   </div>
 
@@ -253,7 +253,7 @@ export default function SchemaBuilder() {
                           type: e.target.value as FieldType,
                         })
                       }
-                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                      className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                     >
                       {FIELD_TYPES.map((type) => (
                         <option key={type.value} value={type.value}>
@@ -272,7 +272,7 @@ export default function SchemaBuilder() {
                       onChange={(e) =>
                         updateField(index, { required: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      className="rounded border-gray-300 text-accent focus:ring-accent"
                     />
                     <span className="text-gray-700">Required</span>
                   </label>
@@ -284,7 +284,7 @@ export default function SchemaBuilder() {
                       onChange={(e) =>
                         updateField(index, { unique: e.target.checked })
                       }
-                      className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      className="rounded border-gray-300 text-accent focus:ring-accent"
                     />
                     <span className="text-gray-700">Unique</span>
                   </label>
@@ -337,7 +337,7 @@ export default function SchemaBuilder() {
                       updateField(index, { helpText: e.target.value })
                     }
                     placeholder="Help text (optional)"
-                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    className="w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
                   />
                 )}
               </div>
@@ -356,7 +356,7 @@ export default function SchemaBuilder() {
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
           >
             Create Model
           </button>

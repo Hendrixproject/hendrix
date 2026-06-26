@@ -60,7 +60,7 @@ export default function ViewRecordPage() {
             href={value}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-indigo-600 hover:underline"
+            className="text-accent hover:underline"
           >
             {value}
           </a>
@@ -69,7 +69,7 @@ export default function ViewRecordPage() {
         return (
           <a
             href={`mailto:${value}`}
-            className="text-indigo-600 hover:underline"
+            className="text-accent hover:underline"
           >
             {value}
           </a>
@@ -102,7 +102,7 @@ export default function ViewRecordPage() {
         <div className="flex items-center gap-2">
           <Link
             href={`/admin/models/${modelId}/${recordId}/edit`}
-            className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
           >
             Edit
           </Link>
@@ -136,7 +136,7 @@ export default function ViewRecordPage() {
       <div className="flex items-center justify-between">
         <Link
           href={`/admin/models/${modelId}`}
-          className="text-indigo-600 hover:text-indigo-800"
+          className="text-accent hover:text-accent-hover"
         >
           ← Back to {model.pluralLabel}
         </Link>

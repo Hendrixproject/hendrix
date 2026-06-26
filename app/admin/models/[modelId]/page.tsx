@@ -102,7 +102,7 @@ export default function ModelListPage() {
         </div>
         <Link
           href={`/admin/models/${modelId}/create`}
-          className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+          className="px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
         >
           + Add {model.label}
         </Link>
@@ -115,7 +115,7 @@ export default function ModelListPage() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search records..."
-          className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+          className="flex-1 max-w-md px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent"
         />
         {selectedRecords.size > 0 && (
           <button
@@ -139,7 +139,7 @@ export default function ModelListPage() {
             <p className="text-gray-500">No records found.</p>
             <Link
               href={`/admin/models/${modelId}/create`}
-              className="mt-4 inline-block px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+              className="mt-4 inline-block px-4 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
             >
               Create First Record
             </Link>
@@ -153,7 +153,7 @@ export default function ModelListPage() {
                     type="checkbox"
                     checked={selectedRecords.size === records.length}
                     onChange={toggleSelectAll}
-                    className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    className="rounded border-gray-300 text-accent focus:ring-accent"
                   />
                 </th>
                 {displayFields.map((field) => (
@@ -177,7 +177,7 @@ export default function ModelListPage() {
                       type="checkbox"
                       checked={selectedRecords.has(record.id)}
                       onChange={() => toggleSelect(record.id)}
-                      className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      className="rounded border-gray-300 text-accent focus:ring-accent"
                     />
                   </td>
                   {displayFields.map((field) => (
@@ -210,7 +210,7 @@ export default function ModelListPage() {
                     <div className="flex items-center justify-end gap-2">
                       <Link
                         href={`/admin/models/${modelId}/${record.id}`}
-                        className="text-indigo-600 hover:text-indigo-900"
+                        className="text-accent hover:text-accent-hover"
                       >
                         View
                       </Link>

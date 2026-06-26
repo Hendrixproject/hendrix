@@ -88,7 +88,7 @@ export default function CreateRecordPage() {
     const value = formData[field.name];
     const error = errors[field.name];
 
-    const baseClasses = `w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent ${
+    const baseClasses = `w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent ${
       error ? "border-red-500" : "border-gray-300"
     }`;
 
@@ -129,7 +129,7 @@ export default function CreateRecordPage() {
               type="checkbox"
               checked={value || false}
               onChange={(e) => handleChange(field, e.target.checked)}
-              className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              className="rounded border-gray-300 text-accent focus:ring-accent"
             />
             <span className="text-sm text-gray-700">
               {field.helpText || "Yes/No"}
@@ -257,7 +257,7 @@ export default function CreateRecordPage() {
           </button>
           <button
             type="submit"
-            className="px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+            className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
           >
             Create {model.label}
           </button>

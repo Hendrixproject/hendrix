@@ -33,7 +33,7 @@ export default function AdminSetup() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-cream flex items-center justify-center p-4">
       <div className="max-w-2xl w-full bg-white rounded-2xl shadow-xl p-8 space-y-6">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">
@@ -44,34 +44,34 @@ export default function AdminSetup() {
           </p>
         </div>
 
-        <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-6 space-y-3">
-          <h2 className="text-lg font-semibold text-indigo-900">✨ Features</h2>
-          <ul className="space-y-2 text-sm text-indigo-800">
+        <div className="bg-accent-soft border border-accent/30 rounded-lg p-6 space-y-3">
+          <h2 className="text-lg font-semibold text-accent-hover">✨ Features</h2>
+          <ul className="space-y-2 text-sm text-accent-hover">
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>Create models dynamically with custom fields</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>Full CRUD operations (Create, Read, Update, Delete)</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>
                 Multiple field types: text, number, boolean, date, email, URL,
                 JSON
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>Field validation (required, unique, min/max values)</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>Search, filter, and bulk operations</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-indigo-600">•</span>
+              <span className="text-accent">•</span>
               <span>Responsive UI built with Tailwind CSS 4</span>
             </li>
           </ul>
@@ -82,7 +82,7 @@ export default function AdminSetup() {
             <div className="space-y-3">
               <button
                 onClick={handleSeed}
-                className="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium transition-colors"
+                className="w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover font-medium transition-colors"
               >
                 🚀 Seed Example Data & Start
               </button>
@@ -103,7 +103,7 @@ export default function AdminSetup() {
             <div className="space-y-3">
               <Link
                 href="/admin"
-                className="block w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 font-medium text-center transition-colors"
+                className="block w-full px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover font-medium text-center transition-colors"
               >
                 Go to Admin Dashboard
               </Link>
@@ -149,14 +149,14 @@ export default function AdminSetup() {
         </div>
 
         <div className="text-center text-sm text-gray-500">
-          <Link href="/" className="text-indigo-600 hover:underline">
+          <Link href="/" className="text-accent hover:underline">
             ← Back to Home
           </Link>
           {" • "}
           <a
             href="/ADMIN_README.md"
             target="_blank"
-            className="text-indigo-600 hover:underline"
+            className="text-accent hover:underline"
           >
             Documentation
           </a>
