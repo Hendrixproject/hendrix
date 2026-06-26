@@ -18,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      {/* suppressHydrationWarning: browser extensions (e.g. ColorZilla's
+          cz-shortcut-listen, Grammarly) mutate <body> before React hydrates,
+          which would otherwise log a hydration mismatch. Scoped to <body> only. */}
+      <body className={inter.className} suppressHydrationWarning>
         <ConfigureAmplify />
         {children}
       </body>
