@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { signOut } from "aws-amplify/auth";
 import AdminGate from "./AdminGate";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
   { href: "/admin", label: "Dashboard" },
@@ -22,9 +23,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
     <AdminGate>
       {/* Robust two-row / two-column grid: header spans the top, then a fixed
           sidebar + fluid content. No absolute positioning, so nothing overlaps. */}
-      <div className="min-h-screen grid grid-rows-[auto_1fr] bg-cream text-ink">
-        {/* Header */}
-        <header className="flex items-center justify-between gap-4 border-b border-edge bg-paper px-6 py-3">
+      <div className="grid min-h-screen grid-rows-[auto_1fr] bg-background text-foreground">
+        <header className="flex items-center justify-between gap-4 border-b bg-card px-6 py-3">
           <Link href="/admin" className="flex items-center gap-2.5">
             <Image
               src="/images/hendrix-logo.png"
@@ -34,20 +34,17 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
               className="rounded"
             />
             <span className="text-lg font-bold tracking-tight">
-              Hendrix <span className="text-ink-faint font-normal">admin</span>
+              Hendrix{" "}
+              <span className="font-normal text-muted-foreground">admin</span>
             </span>
           </Link>
-          <button
-            onClick={() => signOut()}
-            className="rounded-md border border-edge px-3 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-accent hover:text-accent"
-          >
+          <Button variant="outline" size="sm" onClick={() => signOut()}>
             Sign out
-          </button>
+          </Button>
         </header>
 
-        {/* Body: sidebar + content */}
         <div className="grid md:grid-cols-[220px_1fr]">
-          <aside className="border-b border-edge bg-paper p-4 md:border-b-0 md:border-r">
+          <aside className="border-b bg-card p-3 md:border-b-0 md:border-r">
             <nav className="flex gap-1 md:flex-col">
               {navItems.map((item) => {
                 const active = isActive(item.href);
@@ -57,8 +54,8 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
                     href={item.href}
                     className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                       active
-                        ? "bg-accent-soft text-accent"
-                        : "text-ink-soft hover:bg-accent-soft/60 hover:text-ink"
+                        ? "bg-primary/10 text-primary"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground"
                     }`}
                   >
                     {item.label}
